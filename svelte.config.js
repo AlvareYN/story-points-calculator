@@ -14,7 +14,7 @@ const config = {
 		// See https://svelte.dev/docs/kit/adapters for more information about adapters.
 		
 		paths: {
-			base: process.env.NODE_PATH || '',
+			base: "/story-points-calculator",
 		},
 		adapter: adapter({
 			pages: 'build',
