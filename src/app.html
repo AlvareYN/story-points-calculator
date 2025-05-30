@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta
+			name="description"
+			content="Calculadora de Story Points para equipos ágiles. Estima automáticamente story points basándose en tiempo, complejidad y definición."
+		/>
+		<meta
+			name="keywords"
+			content="story points, agile, scrum, estimación, desarrollo software, planning"
+		/>
+		<meta name="author" content="Story Points Calculator" />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Calculadora de Story Points" />
+		<meta
+			property="og:description"
+			content="Herramienta para calcular Story Points de forma dinámica durante las sesiones de planificación ágil."
+		/>
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary" />
+		<meta property="twitter:title" content="Calculadora de Story Points" />
+		<meta
+			property="twitter:description"
+			content="Herramienta para calcular Story Points de forma dinámica durante las sesiones de planificación ágil."
+		/>
+
+		<title>Calculadora de Story Points</title>
+
+		<!-- Preload fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- Dark mode script to prevent flash -->
+		<script>
+			// Set initial theme before page loads to prevent flash
+			(function() {
+				const stored = localStorage.getItem('darkMode');
+				const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+				const isDark = stored ? stored === 'true' : prefersDark;
+				
+				if (isDark) {
+					document.documentElement.classList.add('dark');
+					document.documentElement.style.colorScheme = 'dark';
+				} else {
+					document.documentElement.classList.remove('dark');
+					document.documentElement.style.colorScheme = 'light';
+				}
+			})();
+		</script>
+
+		%sveltekit.head%
+	</head>
+	<body data-sveltekit-preload-data="hover" class="antialiased">
+		<div style="display: contents">%sveltekit.body%</div>
+	</body>
+</html>
