@@ -14,10 +14,8 @@ const config = {
 		// See https://svelte.dev/docs/kit/adapters for more information about adapters.
 		
 		paths: {
-			base: process.env.NODE_ENV === 'production' ? process.env.BASE_PATH || '' : '',
-			assets: process.env.NODE_ENV === 'production' ? process.env.BASE_PATH || '' : ''
+			base: process.env.NODE_PATH || '',
 		},
-		
 		adapter: adapter({
 			pages: 'build',
 			assets: 'build',
